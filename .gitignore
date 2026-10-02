@@ -1,0 +1,13 @@
+# dependencies (symlink to the Harbor build's playwright install)
+node_modules
+
+# generation sources (large PNGs and the master mp4); job IDs are kept in out/jobs.json
+out/*
+!out/jobs.json
+
+# verification screenshots; the scripts are kept
+lab/*
+!lab/*.mjs
+
+.DS_Store
+.vercel
