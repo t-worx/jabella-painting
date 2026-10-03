@@ -108,6 +108,32 @@
     });
   }
 
+  /* Residential dropdown: click toggles, outside click and Escape close. */
+  var subs = document.querySelectorAll('.has-sub');
+  Array.prototype.forEach.call(subs, function (wrap) {
+    var btn = wrap.querySelector('.nav-sub-toggle');
+    if (!btn) return;
+    btn.addEventListener('click', function () {
+      var open = wrap.classList.toggle('is-open');
+      btn.setAttribute('aria-expanded', String(open));
+    });
+  });
+  document.addEventListener('click', function (e) {
+    Array.prototype.forEach.call(subs, function (wrap) {
+      if (!wrap.contains(e.target)) { wrap.classList.remove('is-open'); wrap.querySelector('.nav-sub-toggle').setAttribute('aria-expanded', 'false'); }
+    });
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Escape') return;
+    Array.prototype.forEach.call(subs, function (wrap) { wrap.classList.remove('is-open'); wrap.querySelector('.nav-sub-toggle').setAttribute('aria-expanded', 'false'); });
+  });
+  // Mark the current page in both menus.
+  var here = location.pathname.replace(/index\.html$/, '');
+  Array.prototype.forEach.call(document.querySelectorAll('.desktop-nav a, .mobile-nav a'), function (a) {
+    var href = a.getAttribute('href') || '';
+    if (href.indexOf('#') === -1 && href.replace(/index\.html$/, '') === here) a.setAttribute('aria-current', 'page');
+  });
+
   var reveals = document.querySelectorAll('[data-reveal]');
   if (reveals.length && 'IntersectionObserver' in window && !reduce) {
     reveals.forEach(function (el) {

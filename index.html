@@ -19,30 +19,50 @@
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Inter:wght@400;500;600&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="site.css">
 </head>
-<body>
+<body id="top">
 <a class="skip" href="#services">Skip to services</a>
 
 <header class="site-header">
-  <a class="brand" href="#home" aria-label="Jabella Painting and Carpentry, home">
-    <img src="assets/logo.webp" width="180" height="55" alt="Jabella Painting and Carpentry">
+  <a class="brand" href="/" aria-label="Jabella Painting and Carpentry, home">
+    <img src="/assets/logo.webp" width="180" height="55" alt="Jabella Painting and Carpentry">
   </a>
   <nav class="desktop-nav" aria-label="Main navigation">
-    <a href="#services">Services</a>
-    <a href="#work">Our work</a>
-    <a href="#about">About us</a>
-    <a href="#process">Our process</a>
+    <div class="has-sub">
+      <button type="button" class="nav-sub-toggle" aria-expanded="false" aria-controls="sub-residential">Residential <svg class="chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <div class="nav-sub" id="sub-residential">
+      <a href="/residential/interior/">Interior Painting</a>
+      <a href="/residential/exterior/">Exterior Painting</a>
+      <a href="/residential/garage/">Garage Floors</a>
+      <a href="/residential/cabinets/">Cabinet Refresh</a>
+      <a href="/residential/popcorn/">Popcorn Removal</a>
+      </div>
+    </div>
+    <a href="/#commercial">Commercial</a>
+    <a href="/#remodels">Remodels</a>
+    <a href="/#work">Our Work</a>
+    <a href="/#about">About</a>
+    <a href="/#estimate">Contact</a>
   </nav>
-  <a class="btn btn--primary header-cta" href="#estimate">Get a free estimate <span class="arrow" aria-hidden="true">↗</span></a>
+  <a class="btn btn--primary header-cta" href="/#estimate">Get a free estimate <span class="arrow" aria-hidden="true">↗</span></a>
   <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
     <span></span><span></span>
   </button>
 </header>
 <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation" hidden>
-  <a href="#services">Services</a>
-  <a href="#work">Our work</a>
-  <a href="#about">About us</a>
-  <a href="#process">Our process</a>
-  <a href="#estimate" class="btn btn--primary">Get a free estimate</a>
+  <div class="mobile-group">
+    <p class="mobile-group__label">Residential</p>
+    <a href="/residential/interior/">Interior Painting</a>
+    <a href="/residential/exterior/">Exterior Painting</a>
+    <a href="/residential/garage/">Garage Floors</a>
+    <a href="/residential/cabinets/">Cabinet Refresh</a>
+    <a href="/residential/popcorn/">Popcorn Removal</a>
+  </div>
+  <a href="/#commercial">Commercial</a>
+  <a href="/#remodels">Remodels</a>
+  <a href="/#work">Our Work</a>
+  <a href="/#about">About</a>
+  <a href="/#estimate">Contact</a>
+  <a href="/#estimate" class="btn btn--primary">Get a free estimate</a>
 </nav>
 
 <main>
@@ -98,6 +118,7 @@
           <p class="card__kicker">Transform every room</p>
           <h3>Interior painting</h3>
           <p>From single accent walls to full-home transformations, smooth finishes and sharp lines in every room.</p>
+          <a class="card__more" href="/residential/interior/">Learn more <span class="arrow" aria-hidden="true">↗</span></a>
         </article>
         <article class="card">
           <div class="card__media">
@@ -107,6 +128,7 @@
           <p class="card__kicker">Curb appeal that lasts</p>
           <h3>Exterior painting</h3>
           <p>Protect your home from Florida’s sun, rain and humidity with premium UV-resistant coatings built to endure.</p>
+          <a class="card__more" href="/residential/exterior/">Learn more <span class="arrow" aria-hidden="true">↗</span></a>
         </article>
         <article class="card">
           <div class="card__media">
@@ -116,6 +138,7 @@
           <p class="card__kicker">A new kitchen without the renovation</p>
           <h3>Cabinet refresh</h3>
           <p>Modernize kitchen or bathroom cabinets with a sprayed, factory-smooth refinished finish. No tear-out needed.</p>
+          <a class="card__more" href="/residential/cabinets/">Learn more <span class="arrow" aria-hidden="true">↗</span></a>
         </article>
         <article class="card">
           <div class="card__media">
@@ -125,6 +148,7 @@
           <p class="card__kicker">Modernize your ceilings</p>
           <h3>Popcorn ceiling removal</h3>
           <p>Remove dated popcorn texture for clean, smooth ceilings that brighten every room. Asbestos-tested first on older homes.</p>
+          <a class="card__more" href="/residential/popcorn/">Learn more <span class="arrow" aria-hidden="true">↗</span></a>
         </article>
         <article class="card">
           <div class="card__media">
@@ -134,8 +158,9 @@
           <p class="card__kicker">Showroom-quality surfaces</p>
           <h3>Garage floor coatings</h3>
           <p>Durable epoxy and polyaspartic coatings in solid, flake or metallic finishes. Most installs completed in one day.</p>
+          <a class="card__more" href="/residential/garage/">Learn more <span class="arrow" aria-hidden="true">↗</span></a>
         </article>
-        <article class="card">
+        <article class="card" id="remodels">
           <div class="card__media">
             <img src="assets/remodel.webp" alt="A remodeled white kitchen with new cabinets, island and stainless appliances" loading="lazy" width="800" height="600">
             <span class="card__num">06</span>
@@ -146,7 +171,7 @@
         </article>
       </div>
 
-      <aside class="commercial" data-reveal aria-labelledby="commercial-title">
+      <aside class="commercial" id="commercial" data-reveal aria-labelledby="commercial-title">
         <div class="commercial__media">
           <img src="assets/commercial.webp" alt="A Jabella painter on a ladder painting the facade of a Tire Kingdom store" loading="lazy" width="1050" height="1400">
         </div>
@@ -383,47 +408,46 @@
   <div class="wrap">
     <div class="footer__grid">
       <div class="footer__about">
-        <a class="brand brand--footer" href="#home" aria-label="Jabella Painting and Carpentry, back to top">
-          <img src="assets/logo-white.webp" width="180" height="55" alt="Jabella Painting and Carpentry">
+        <a class="brand brand--footer" href="/" aria-label="Jabella Painting and Carpentry, back to top">
+          <img src="/assets/logo-white.webp" width="180" height="55" alt="Jabella Painting and Carpentry">
         </a>
         <p>30+ years of premium residential &amp; commercial painting, carpentry, and remodeling in Palm Beach County, FL.</p>
-        <a class="btn btn--light footer__cta" href="#estimate">Get a free estimate <span class="arrow" aria-hidden="true">↗</span></a>
+        <a class="btn btn--light footer__cta" href="/#estimate">Get a free estimate <span class="arrow" aria-hidden="true">↗</span></a>
       </div>
 
       <nav class="footer__col" aria-labelledby="f-services">
-        <h4 id="f-services">Services</h4>
+        <h4 id="f-services">Residential</h4>
         <ul>
-          <li><a href="#services">Interior painting</a></li>
-          <li><a href="#services">Exterior painting</a></li>
-          <li><a href="#services">Cabinet refresh</a></li>
-          <li><a href="#services">Popcorn ceiling removal</a></li>
-          <li><a href="#services">Garage floor coatings</a></li>
-          <li><a href="#services">Carpentry and remodels</a></li>
-          <li><a href="#services">Commercial painting</a></li>
+          <li><a href="/residential/interior/">Interior Painting</a></li>
+          <li><a href="/residential/exterior/">Exterior Painting</a></li>
+          <li><a href="/residential/garage/">Garage Floors</a></li>
+          <li><a href="/residential/cabinets/">Cabinet Refresh</a></li>
+          <li><a href="/residential/popcorn/">Popcorn Removal</a></li>
         </ul>
       </nav>
 
       <nav class="footer__col" aria-labelledby="f-company">
         <h4 id="f-company">Company</h4>
         <ul>
-          <li><a href="#about">About us</a></li>
-          <li><a href="#work">Our work</a></li>
-          <li><a href="#process">Our process</a></li>
-          <li><a href="#faq">FAQ</a></li>
-          <li><a href="#estimate">Free estimate</a></li>
+          <li><a href="/#commercial">Commercial</a></li>
+          <li><a href="/#remodels">Remodels</a></li>
+          <li><a href="/#work">Our work</a></li>
+          <li><a href="/#about">About</a></li>
+          <li><a href="/#process">Our process</a></li>
+          <li><a href="/#faq">FAQ</a></li>
         </ul>
       </nav>
 
       <nav class="footer__col" aria-labelledby="f-areas">
         <h4 id="f-areas">Service areas</h4>
         <ul>
-          <li><a href="#estimate">Boca Raton</a></li>
-          <li><a href="#estimate">Delray Beach</a></li>
-          <li><a href="#estimate">Highland Beach</a></li>
-          <li><a href="#estimate">Boynton Beach</a></li>
-          <li><a href="#estimate">Manalapan</a></li>
-          <li><a href="#estimate">Palm Beach</a></li>
-          <li><a href="#estimate">Palm Beach County</a></li>
+          <li><a href="/#estimate">Boca Raton</a></li>
+          <li><a href="/#estimate">Delray Beach</a></li>
+          <li><a href="/#estimate">Highland Beach</a></li>
+          <li><a href="/#estimate">Boynton Beach</a></li>
+          <li><a href="/#estimate">Manalapan</a></li>
+          <li><a href="/#estimate">Palm Beach</a></li>
+          <li><a href="/#estimate">Palm Beach County</a></li>
         </ul>
       </nav>
 
@@ -447,7 +471,7 @@
       <ul class="footer__legal">
         <li><a href="#">Privacy policy</a></li>
         <li><a href="#">Terms of service</a></li>
-        <li><a href="#home">Back to top <span class="arrow" aria-hidden="true">↗</span></a></li>
+        <li><a href="#top">Back to top <span class="arrow" aria-hidden="true">↗</span></a></li>
       </ul>
     </div>
   </div>

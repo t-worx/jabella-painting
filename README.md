@@ -9,6 +9,9 @@ All photography and footage were generated through Higgsfield (Seedream 5 Pro
 stills, Seedance 2.0 clips) from one shared style preamble. See `BRIEF.md`.
 
 ## Files
+- `tools/build.py`: renders the shared header/footer into every page and
+  generates `residential/<slug>/index.html` for the five service pages from
+  content in `CONTENT.md`. Run `python3 tools/build.py` after editing it.
 - `index.html`, `site.css`, `site.js`: the page. No build step, no framework.
 - `assets/hero.mp4` (desktop, 1080p) and `assets/hero-m.mp4` (phone, 720p): the
   15 s hero film, encoded with a dense keyframe interval so it scrubs cleanly.
